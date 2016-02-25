@@ -14,7 +14,7 @@ class DrawView: UIView {
         super.init(coder: aDecoder)
     }
     
-    // 纪录所有点
+    // 记录所有点
     var allPointAray = [[CGPoint]]()
     // 记录当前按下去移动时的所有点
     var subPointAray = [CGPoint]()
@@ -26,6 +26,9 @@ class DrawView: UIView {
     
     func 撤销一步(){
         subPointAray.removeAll()
+        if(allPointAray.count > 0){
+            allPointAray.removeLast()
+        }
         setNeedsDisplay()
     }
     
