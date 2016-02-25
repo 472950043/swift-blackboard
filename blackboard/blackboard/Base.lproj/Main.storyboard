@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="blackboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s06-LK-VhX">
+                                <rect key="frame" x="170" y="20" width="60" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="KS8-3h-o7Z"/>
+                                    <constraint firstAttribute="width" constant="60" id="q9M-KG-27z"/>
+                                </constraints>
+                                <state key="normal" title="清除所有"/>
+                                <connections>
+                                    <action selector="清除所有:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FxW-bi-dMp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Hd-u6-aYX">
+                                <rect key="frame" x="270" y="20" width="60" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="3x3-w3-aU3"/>
+                                    <constraint firstAttribute="height" constant="44" id="XSR-4P-Bdc"/>
+                                </constraints>
+                                <state key="normal" title="撤销一步"/>
+                                <connections>
+                                    <action selector="撤销一步:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cyn-uL-m8w"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Elv-Ra-mDy">
+                                <rect key="frame" x="370" y="20" width="60" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="DMN-8V-go8"/>
+                                    <constraint firstAttribute="height" constant="44" id="evJ-gn-Xjr"/>
+                                </constraints>
+                                <state key="normal" title="保存图片"/>
+                                <connections>
+                                    <action selector="保存图片:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eTH-Yg-iK3"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VgK-EH-9Bx" customClass="DrawView" customModule="blackboard" customModuleProvider="target">
+                                <rect key="frame" x="20" y="64" width="560" height="516"/>
+                                <color key="backgroundColor" red="0.14117647058823529" green="0.24313725490196078" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.47450980392156861" green="0.28627450980392155" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="5Hd-u6-aYX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2ep-ER-Riw"/>
+                            <constraint firstItem="5Hd-u6-aYX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="CcJ-Tr-9W4"/>
+                            <constraint firstItem="Elv-Ra-mDy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Gtl-SJ-HHo"/>
+                            <constraint firstAttribute="trailing" secondItem="VgK-EH-9Bx" secondAttribute="trailing" constant="20" id="KSd-Iu-0bg"/>
+                            <constraint firstItem="5Hd-u6-aYX" firstAttribute="leading" secondItem="s06-LK-VhX" secondAttribute="trailing" constant="40" id="L1b-gi-Fd4"/>
+                            <constraint firstItem="s06-LK-VhX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ODO-k9-yOU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VgK-EH-9Bx" secondAttribute="bottom" constant="20" id="PDH-9a-rmO"/>
+                            <constraint firstItem="VgK-EH-9Bx" firstAttribute="top" secondItem="Elv-Ra-mDy" secondAttribute="bottom" id="S21-YO-oH8"/>
+                            <constraint firstItem="VgK-EH-9Bx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="had-U4-G7W"/>
+                            <constraint firstItem="Elv-Ra-mDy" firstAttribute="leading" secondItem="5Hd-u6-aYX" secondAttribute="trailing" constant="40" id="u2O-fH-Rm1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="drawView" destination="VgK-EH-9Bx" id="NMN-Z7-Lhb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="311" y="418"/>
+        </scene>
+    </scenes>
+</document>
