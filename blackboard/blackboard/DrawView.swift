@@ -57,11 +57,12 @@ class DrawView: UIView {
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         print("touchesEnded")
-        setNeedsDisplay()
         let touchesArr = event?.allTouches()
         if let touch1 = touchesArr?.first {
             let point = touch1.locationInView(touch1.view)
+            allPointAray.removeLast()
             subPointAray.append(point)
+            allPointAray.append(subPointAray)
             setNeedsDisplay()
         }
     }
